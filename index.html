@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Organiser App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2>Business Organiser</h2>
+      <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#clients">Clients</a>
+        <a href="#jobs">Jobs</a>
+      </nav>
+    </aside>
 
+    <main class="main-content">
+      <section id="dashboard">
+        <h1>Dashboard</h1>
+        <div class="cards">
+          <div class="card">
+            <h3>Total Clients</h3>
+            <p id="totalClients">0</p>
+          </div>
+          <div class="card">
+            <h3>Total Jobs</h3>
+            <p id="totalJobs">0</p>
+          </div>
+          <div class="card">
+            <h3>Completed Jobs</h3>
+            <p id="completedJobs">0</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="clients">
+        <h2>Clients</h2>
+        <form id="clientForm" class="form-card">
+          <input type="text" id="clientName" placeholder="Client name" required />
+          <input type="text" id="clientPhone" placeholder="Phone number" />
+          <input type="text" id="clientAddress" placeholder="Address" />
+          <textarea id="clientNotes" placeholder="Notes"></textarea>
+          <button type="submit">Add Client</button>
+        </form>
+
+        <div id="clientList" class="list"></div>
+      </section>
+
+      <section id="jobs">
+        <h2>Jobs</h2>
+        <form id="jobForm" class="form-card">
+          <select id="jobClient" required>
+            <option value="">Select client</option>
+          </select>
+          <input type="text" id="jobService" placeholder="Service" required />
+          <input type="date" id="jobDate" required />
+          <input type="number" id="jobPrice" placeholder="Price" required />
+          <button type="submit">Add Job</button>
+        </form>
+
+        <div id="jobList" class="list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
